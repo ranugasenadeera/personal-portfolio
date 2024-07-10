@@ -253,7 +253,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   display: inline-block;
 }
 .banner h1 {
-  font-size: 65px;
+  font-size: 52px;
   font-weight: 700;
   letter-spacing: 0.8px;
   line-height: 1;
@@ -364,15 +364,19 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 56%;
 }
 .project .nav.nav-pills {
-  width: 72%;
+  width: 100%; /* Change to 100% to fit the container */
+  max-width: 72%; /* Set a max-width to maintain the original look on larger screens */
   margin: 0 auto;
   border-radius: 50px;
-  background-color: rgb(255 255 255 / 10%);
+  background-color: rgba(255, 255, 255, 0.1);
   overflow: hidden;
 }
+
 .project .nav.nav-pills .nav-item {
-  width: 33.33333%;
+  width: 100%; /* Full width on mobile */
+  max-width: 33.33333%; /* Ensure one-third width on larger screens */
 }
+
 .project .nav.nav-pills .nav-link {
   background-color: transparent;
   border-radius: 0;
@@ -387,34 +391,61 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   text-align: center;
   z-index: 0;
 }
+
 .project .nav.nav-pills .nav-link::before {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 100%;
-    background: linear-gradient(90deg, #0f0c29, #302b63, #24243e);
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: 0.3s ease-in-out;
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90deg, #0f0c29, #302b63, #24243e);
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: 0.3s ease-in-out;
 }
+
 .project .nav.nav-pills .nav-link.active::before {
-    width: 100% !important;
+  width: 100% !important;
 }
+
 .project .nav.nav-pills .nav-link.active {
-    border: 1px solid rgba(255, 255, 255, 1);
+  border: 1px solid rgba(255, 255, 255, 1);
 }
+
 .nav-link#projects-tabs-tab-first {
   border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 55px 0px 0px 55px;
+  border-radius: 55px 0 0 55px;
 }
+
 .nav-link#projects-tabs-tab-second {
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
+
 .nav-link#projects-tabs-tab-third {
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 0 55px 55px 0;
+}
+
+/* Additional media query to handle mobile view */
+@media (max-width: 768px) {
+  .project .nav.nav-pills {
+    max-width: 100%;
+  }
+  
+  .project .nav.nav-pills .nav-item {
+    max-width: 100%;
+  }
+
+  .project .nav.nav-pills .nav-link {
+    padding: 15px 0;
+  }
+
+  .nav-link#projects-tabs-tab-first,
+  .nav-link#projects-tabs-tab-second,
+  .nav-link#projects-tabs-tab-third {
+    border-radius: 0;
+  }
 }
 .proj-imgbx {
   position: relative;
@@ -467,6 +498,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 35%;
   right: 0;
   z-index: -4;
+}
+.proj-txtx .highlight {
+  color: #ffcc00; /* Bright yellow to contrast with the gradient background */
+  font-weight: bold;
 }
 
 /************ Projects Css ************/
@@ -557,15 +592,32 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background: #FFFFFF;
   border-radius: 55px;
   color: #121212;
-  padding: 85px 85px;
+  padding: 85px 125px;
   margin-bottom: 80px;
   margin-top: -122px;
+  position: relative; /* Added to ensure proper positioning */
 }
+
 .newsletter-bx h3 {
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.5px;
   line-height: 1.2em;
+  text-align: center; /* Center the text by default */
 }
+
+/* Additional styles for iPad Air */
+@media only screen and (min-width: 820px) and (max-width: 1180px) and (orientation: portrait) {
+  .newsletter-bx {
+    padding: 20px; /* Adjust padding for smaller screens */
+  }
+
+  .newsletter-bx h3 {
+    text-align: center;
+    margin-left: 160px; /* Align text to the left for iPad Air */
+    width: 100%; /* Make the h3 take full width */
+  }
+}
+
 .new-email-bx {
   background: #fff;
   padding: 5px;
@@ -575,9 +627,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   display: flex;
   align-items: center;
 }
+
 .new-email-bx::before {
   content: "";
-  background: llinear-gradient(90deg, #0f0c29, #302b63, #24243e);
+  background: linear-gradient(90deg, #0f0c29, #302b63, #24243e); /* Fixed typo: 'llinear' to 'linear' */
   border-radius: 20px;
   position: absolute;
   z-index: -1;
@@ -586,6 +639,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   bottom: -1px;
   right: -1px;
 }
+
 .new-email-bx::after {
   content: "";
   background: #fff;

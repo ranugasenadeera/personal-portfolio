@@ -37,9 +37,9 @@ export const Projects = () => {
     },
     {
       title: "My Portfolio",
-      description: "Developed the Student Portal using ASP.NET Core, C#, HTML, CSS, JavaScript, Tailwind CSS, Microsoft SQL Server",
+      description: "Developed my personal portfolio using React, Bootstrap, Animate.CSS, EmailJS and JavaScript, showcasing my skills, projects, and contact information",
       imgUrl: portfolio,
-      link: 'https://github.com/ranugasenadeera/Student-Management-System',
+      link: 'https://github.com/ranugasenadeera/personal-portfolio',
     },
   ];
 
@@ -77,7 +77,7 @@ export const Projects = () => {
                   <h2>Projects</h2>
                   <p>Explore my diverse portfolio showcasing innovative web applications and dynamic mobile solutions. Each project highlights my expertise in full-stack development, emphasizing user-centric design and robust functionality. Discover how I tackle complex challenges with creativity and precision.</p>
                   <Tab.Container id="projects-tabs" defaultActiveKey="first">
-                    <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
+                    <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab" style={{ cursor: "pointer" }}>
                       <Nav.Item>
                         <Nav.Link eventKey="first">Web Apps</Nav.Link>
                       </Nav.Item>

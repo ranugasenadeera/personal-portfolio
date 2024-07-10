@@ -61,7 +61,7 @@ export const Contact = () => {
           <Col size={12} md={6}>
             <TrackVisibility>
               {({ isVisible }) =>
-                <img className={`rounded-circle ${isVisible ? "animate__animated animate__zoomIn" : ""}`} src={contact} alt="Contact Us" style={{ width: '500px', height: 'auto' }} />
+                <img className={`rounded-circle ${isVisible ? "animate__animated animate__zoomIn" : ""}`} src={contact} alt="Contact Us" />
               }
             </TrackVisibility>
           </Col>

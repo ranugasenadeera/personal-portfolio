@@ -12,7 +12,7 @@ export const Banner = () => {
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-  const toRotate = ["Software Engineering Undergraduate"];
+  const toRotate = ["Software Engineering Student", "Full Stack Developer"];
   const period = 2000;
 
   useEffect(() => {
@@ -57,7 +57,7 @@ export const Banner = () => {
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                   <span className="tagline">Welcome to my Portfolio</span>
-                  <h1>{`Hi! I'm Ranuga Senadeera, `} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Software Engineering Undergraduate" ]'><span className="wrap">{text}</span></span></h1>
+                  <h1>{`Hi! I'm Ranuga Senadeera, `} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Software Engineering Student", "Full Stack Developer" ]'><span className="wrap">{text}</span></span></h1>
                   <p>Third Year undergraduate in Software Engineering dedicated to improving
                     skills through hands-on learning and development work. Proficient in mobile
                     and web development environments. Adept at using React, Java, JavaScript,
