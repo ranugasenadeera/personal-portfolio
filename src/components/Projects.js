@@ -26,7 +26,7 @@ export const Projects = () => {
     },
     {
       title: "Online Gaming Site",
-      description: "Developed Customer support function using Java, HTML, CSS, JavaScript and MYSQL",
+      description: "Developed Customer support function with login page using Java, HTML, CSS, JavaScript and MYSQL",
       imgUrl: gaming,
       link: 'https://github.com/ranugasenadeera/OOP-Project',
       briefIntro: "The site offers game purchase and download functionalities, including browsing, transactions, and customer support via ticketing. Roles include product management for game listings and admin oversight for approval and payment security.",
@@ -36,7 +36,7 @@ export const Projects = () => {
       description: "Developed the Student Portal using ASP.NET Core, C#, HTML, CSS, JavaScript, Tailwind CSS and Microsoft SQL Server",
       imgUrl: student,
       link: 'https://github.com/ranugasenadeera/Student-Management-System',
-      briefIntro: "The Student Management System efficiently manages student details and includes essential pages like About, Privacy Policy, and Student Add/Edit functionality, ensuring comprehensive administrative support, user privacy, and seamless user experience.",
+      briefIntro: "This System efficiently manages student details and includes essential pages like About, Privacy Policy, and Student Add/Edit functionality, ensuring administrative support and seamless user experience.",
     },
     {
       title: "My Portfolio",
@@ -93,7 +93,7 @@ export const Projects = () => {
                         <Nav.Link eventKey="second">Mobile Apps</Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
-                        <Nav.Link eventKey="third">Pending</Nav.Link>
+                        <Nav.Link eventKey="third">Coming Soon</Nav.Link>
                       </Nav.Item>
                     </Nav>
                     <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>

@@ -7,8 +7,8 @@ import icons10 from '../assets/img/icons10.svg';
 import icons11 from '../assets/img/icons11.svg';
 
 const LogoSVG = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50" width="200" height="50">
-    <text x="100" y="35" fontFamily="Verdana" fontSize="24" fill="#fff" textAnchor="middle">KRGSenadeera</text>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 50" width="200" height="50">
+    <text x="120" y="35" fontFamily="Verdana" fontSize="24" fill="#fff" textAnchor="middle">RanugaSenadeera</text>
   </svg>
 );
 

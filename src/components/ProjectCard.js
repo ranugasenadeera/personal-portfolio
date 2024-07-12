@@ -45,7 +45,7 @@ export const ProjectCard = ({ title, description, imgUrl, link, briefIntro }) =>
       <div className="proj-imgbx" onClick={handleClick} style={{ cursor: "pointer" }}>
         <img src={imgUrl} alt={title} />
         <div className="proj-intro">
-        <span dangerouslySetInnerHTML={{ __html: highlightedDesc }}></span>
+          <span dangerouslySetInnerHTML={{ __html: highlightedDesc }}></span>
         </div>
         <div className="proj-txtx">
           <h4>{title}</h4>
