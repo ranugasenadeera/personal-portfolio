@@ -57,7 +57,12 @@ export const Banner = () => {
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                   <span className="tagline">Welcome to my Portfolio</span>
-                  <h1>{`Hi! I'm Ranuga Senadeera, `} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Software Engineering Undergraduate", "Full Stack Developer" ]'><span className="wrap">{text}</span></span></h1>
+                  <h1 style={{ minHeight: "10.0rem" }}>
+                    {`Hi! I'm Ranuga Senadeera, `}
+                    <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Software Engineering Undergraduate", "Full Stack Developer" ]'>
+                      <span className="wrap">{text}</span>
+                    </span>
+                  </h1>
                   <p>Fourth Year undergraduate in Software Engineering dedicated to improving
                     skills through hands-on learning and development work. 
                     Passionate about full-stack and mobile application development, with a strong focus on continuous learning. Proficient in technologies such as 
