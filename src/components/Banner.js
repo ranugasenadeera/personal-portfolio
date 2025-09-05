@@ -12,7 +12,7 @@ export const Banner = () => {
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-  const toRotate = ["Software Engineering Student", "Full Stack Developer"];
+  const toRotate = ["Software Engineering Undergraduate", "Full Stack Developer"];
   const period = 2000;
 
   useEffect(() => {
@@ -57,12 +57,12 @@ export const Banner = () => {
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                   <span className="tagline">Welcome to my Portfolio</span>
-                  <h1>{`Hi! I'm Ranuga Senadeera, `} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Software Engineering Student", "Full Stack Developer" ]'><span className="wrap">{text}</span></span></h1>
-                  <p>Third Year undergraduate in Software Engineering dedicated to improving
-                    skills through hands-on learning and development work. Proficient in mobile
-                    and web development environments. Adept at using React, Java, JavaScript,
-                    HTML and other programming languages to produce clean code. Wellorganized and collaborative team player with strong confidence and
-                    creativity.
+                  <h1>{`Hi! I'm Ranuga Senadeera, `} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Software Engineering Undergraduate", "Full Stack Developer" ]'><span className="wrap">{text}</span></span></h1>
+                  <p>Fourth Year undergraduate in Software Engineering dedicated to improving
+                    skills through hands-on learning and development work. 
+                    Passionate about full-stack and mobile application development, with a strong focus on continuous learning. Proficient in technologies such as 
+                    Java, JavaScript/TypeScript, React, Node.js, Flutter, Spring Boot, PHP (Laravel), 
+                    SQL/MongoDB, and more to deliver well-structured, clean, and scalable code.
                   </p>
                   <button onClick={() => document.getElementById('connect').scrollIntoView({ behavior: 'smooth' })}>
                     Let’s Connect <ArrowRightCircle size={25} />
