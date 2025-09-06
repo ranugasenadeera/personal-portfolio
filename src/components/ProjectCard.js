@@ -27,6 +27,25 @@ export const ProjectCard = ({ title, description, imgUrl, link, briefIntro }) =>
       "Animate.",
       "Animate.CSS",
       "EmailJS",
+      "Flutter",
+      "PHP",
+      "MySQL",
+      "Spring Boot",
+      "MongoDB",
+      "Laravel",
+      "TypeScript",
+      "Node.js",
+      "Express",
+      "JWT",
+      "Material-UI",
+      "Query",
+      "Router",
+      "REST Countries API",
+      "Vercel",
+      "Docker",
+      "REST API",
+      "Postman",
+      "Next.js"
     ];
 
     // Highlight technologies with a suitable background color
