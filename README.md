@@ -1,12 +1,13 @@
 # Personal Portfolio
 
-This is a personal portfolio web application built with React. It showcases skills, projects, and contact information.
+This is a personal portfolio web application built with React. It showcases skills, projects, education, experience, and contact information.
 
 ## Features
 
 - Responsive design for desktop, tablet, and mobile
-- Skills carousel
-- Projects tabbed interface
+- Skills carousel with React Icons
+- Projects tabbed interface (Web Apps, Mobile Apps, Coming Soon)
+- Profile section with Education and Experience
 - Contact form with EmailJS integration
 - Newsletter subscription via Mailchimp
 - Social media links
@@ -39,9 +40,13 @@ npm run build
 
 ## Folder Structure
 
-- `src/components/` - React components
+- `src/components/` - React components (Skills, Projects, Profile, Banner, NavBar, Footer, etc.)
 - `src/assets/` - Images and fonts
 - `public/` - Static files
+
+## Technologies Used
+
+- React, Bootstrap, Tailwind CSS, Next.js, Spring Boot, Java, MongoDB, MySQL, Laravel, Flutter, TypeScript, EmailJS
 
 ## Contact
 
@@ -49,5 +54,5 @@ For any inquiries, use the contact form on the website or email: senadeerakrg@gm
 
 ## License
 
-This project is licensed under
+This project is licensed under the MIT License.
 
