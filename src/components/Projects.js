@@ -24,6 +24,7 @@ export const Projects = () => {
       title: "Finance Tracker System",
       description: "Technologies: Spring Boot(Java), MongoDB, Next.js, Tailwind CSS, JWT, REST API, Postman",
       imgUrl: finance,
+      
       link: 'https://github.com/ranugasenadeera/Finance-Tracker-System',
       briefIntro: "A personal finance tracker app to monitor expenses, set budgets, analyze trends, and generate reports. Responsive frontend with secure backend integration.",
     },

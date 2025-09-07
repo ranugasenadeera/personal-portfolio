@@ -36,12 +36,12 @@ export const Skills = () => {
 
   return (
     <section className="skill" id="skills">
-      <div className="container mt-3">
+      <div className="container" style={{ backdropFilter: 'blur(20px)', }}>
         <div className="row">
           <div className="col-12">
             <div className="skill-bx wow zoomIn" style={{ position: "relative" }}>
               <h2>Skills</h2>
-              <p>Proficient in both front-end and back-end development, with expertise in creating responsive <br /> and dynamic web applications.</p>
+              <p>Proficient in both front-end and back-end development, with expertise in creating responsive and dynamic web applications.</p>
               {/* Left navigation icon */}
               <button
                 className="btn btn-dark d-flex align-items-center justify-content-center position-absolute rounded-circle"
@@ -121,7 +121,6 @@ export const Skills = () => {
           </div>
         </div>
       </div>
-      <img className="background-image-left" src={colorSharp} alt="Image" />
     </section>
   );
 };

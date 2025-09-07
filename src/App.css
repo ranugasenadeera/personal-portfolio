@@ -253,7 +253,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /************ Banner Css ************/
 .banner {
   margin-top: -50px;
-  padding: 260px 0 100px 0;
+  padding: 260px 0 180px 0;
   background-image: url('./assets/img/background2.jpg');
   background-position: top center;
   background-size: cover;
@@ -310,6 +310,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .banner img {
   animation: updown 3s linear infinite;
+  margin-left: 0;
+}
+
+/* Only apply margin-left: 25% for desktop screens */
+@media (min-width: 1024px) {
+  .banner img {
+    margin-left: 25%;
+  }
 }
 @keyframes updown {
     0% {
@@ -328,13 +336,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Skills Css ************/
 .skill {
-  padding: 0 0 50px 0;
+  padding: 80px 0 80px 0;
   position: relative;
 }
 .skill-bx {
-  background: #151515;
-  border-radius: 64px;
   text-align: center;
+  backdrop-filter: blur(10px);
   padding: 60px 50px;
   margin-top: -60px;
 }
@@ -344,6 +351,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .skill p {
     color: #B8B8B8;
+    padding-top: 2%;
     font-size: 18px;
     letter-spacing: 0.8px;
     line-height: 1.5em;
@@ -676,10 +684,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /************ Footer Css ************/
 .footer {
   padding: 0 0 10px 0;
-  background-image: url('./assets/img/footer-bg.png');
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  
 }
 .newsletter-bx {
   background: #FFFFFF;
