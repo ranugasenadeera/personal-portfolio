@@ -4,6 +4,8 @@ import contact from "../assets/img/contact.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 import emailjs from '@emailjs/browser';
+import Lottie from "lottie-react";
+import contactAnimation from "../assets/contact.json";
 
 export const Contact = () => {
   const form = useRef();
@@ -29,7 +31,12 @@ export const Contact = () => {
     e.preventDefault();
     setButtonText("Sending...");
 
-    emailjs.sendForm('service_ij7ppxg', 'template_19cwm9s', form.current, '9oMwPH93j1y7yvytt')
+    emailjs.sendForm(
+      process.env.REACT_APP_EMAILJS_SERVICE_ID,
+      process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+      form.current,
+      process.env.REACT_APP_EMAILJS_USER_ID
+    )
       .then(() => {
         setButtonText("Send");
         setFormDetails({
@@ -61,7 +68,7 @@ export const Contact = () => {
           <Col size={12} md={6}>
             <TrackVisibility>
               {({ isVisible }) =>
-                <img className={`rounded-circle ${isVisible ? "animate__animated animate__zoomIn" : ""}`} src={contact} alt="Contact Us" />
+                <Lottie animationData={contactAnimation} loop={true} style={{ height: 300, width: 300, marginLeft: 'auto', marginRight: 'auto', display: 'block' }} />
               }
             </TrackVisibility>
           </Col>
@@ -73,13 +80,13 @@ export const Contact = () => {
                   <form ref={form} onSubmit={sendEmail}>
                     <Row>
                       <Col size={12} sm={6} className="px-1">
-                        <input type="text" name="from_first_name" value={formDetails.from_first_name} placeholder="First Name" onChange={(e) => onFormUpdate('from_first_name', e.target.value)} required/>
+                        <input type="text" name="from_first_name" value={formDetails.from_first_name} placeholder="First Name" onChange={(e) => onFormUpdate('from_first_name', e.target.value)} required />
                       </Col>
                       <Col size={12} sm={6} className="px-1">
-                        <input type="text" name="from_last_name" value={formDetails.from_last_name} placeholder="Last Name" onChange={(e) => onFormUpdate('from_last_name', e.target.value)} required/>
+                        <input type="text" name="from_last_name" value={formDetails.from_last_name} placeholder="Last Name" onChange={(e) => onFormUpdate('from_last_name', e.target.value)} required />
                       </Col>
                       <Col size={12} sm={6} className="px-1">
-                        <input type="email" name="from_email" value={formDetails.from_email} placeholder="Email Address" onChange={(e) => onFormUpdate('from_email', e.target.value)} required/>
+                        <input type="email" name="from_email" value={formDetails.from_email} placeholder="Email Address" onChange={(e) => onFormUpdate('from_email', e.target.value)} required />
                       </Col>
                       <Col size={12} sm={6} className="px-1">
                         <input type="tel" name="from_phone" value={formDetails.from_phone} placeholder="Phone No." onChange={(e) => onFormUpdate('from_phone', e.target.value)} />

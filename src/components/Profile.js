@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { 
-  Code, 
-  Database, 
-  Smartphone, 
-  Server, 
-  Globe, 
+import {
+  Code,
+  Database,
+  Smartphone,
+  Server,
+  Globe,
   Layers,
   GraduationCap,
   Briefcase,
@@ -59,16 +59,16 @@ const Profile = () => {
   const experience = [
     {
       position: "Software Engineering Intern",
-      company: "Olee AI",
+      company: "Olee AI - Malabe (Onsite)",
       period: "Aug 2025 - present",
-      description: "Developed and maintained web applications using React, Node.js, and MongoDB. Collaborated with cross-functional teams to deliver scalable solutions and improve user experience.",
+      description: "Develop and maintain frontend applications using Next.js with TypeScript. Collaborate with cross-functional teams to deliver scalable solutions and improve user experience.",
       status: "Current"
     },
     {
       position: "Software Developer Intern",
-      company: "Apps Technologies",
+      company: "Apps Technologies - Remote",
       period: "Oct 2024 - Apr 2025",
-      description: "Built and deployed multiple web and mobile applications for clients, focusing on performance, security, and responsive design using modern frameworks and cloud services.",
+      description: "Built and deployed multiple web and mobile applications using PHP (Laravel), focusing on performance, security, and responsive design using modern frameworks and cloud services.",
       status: "Completed"
     }
   ];
@@ -115,11 +115,11 @@ const Profile = () => {
           {/* Education Section */}
           <Col xs={12} md={6}>
             <div style={{
-              background: 'rgba(255, 255, 255, 0.1)',
+              background: 'rgba(255, 255, 255, 0.06)',
               borderRadius: '20px',
               padding: '30px',
               height: '100%',
-              backdropFilter: 'blur(10px)',
+              backdropFilter: 'blur(20%)',
               border: '1px solid rgba(255, 255, 255, 0.1)'
             }}>
               <h3 style={{
@@ -206,7 +206,7 @@ const Profile = () => {
           {/* Experience Section */}
           <Col xs={12} md={6}>
             <div style={{
-              background: 'rgba(255, 255, 255, 0.1)',
+              background: 'rgba(255, 255, 255, 0.06)',
               borderRadius: '20px',
               padding: '30px',
               height: '100%',

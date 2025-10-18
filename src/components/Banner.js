@@ -63,11 +63,12 @@ export const Banner = () => {
                       <span className="wrap">{text}</span>
                     </span>
                   </h1>
-                  <p>Fourth Year undergraduate in Software Engineering dedicated to improving
-                    skills through hands-on learning and development work. 
-                    Passionate about full-stack and mobile application development, with a strong focus on continuous learning. Proficient in technologies such as 
-                    Java, JavaScript/TypeScript, React, Node.js, Flutter, Spring Boot, PHP (Laravel), 
-                    SQL/MongoDB, and more to deliver well-structured, clean, and scalable code.
+                  <p>
+                    Fourth year undergraduate specializing in Software Engineering, committed to continuous learning 
+                    and hands-on development. Passionate about building robust full-stack 
+                    and mobile applications with a focus on clean, scalable code and user-centric design. 
+                    Experienced in technologies including Java (Spring Boot), JavaScript/TypeScript, React, Next.js, Node.js, 
+                    Flutter, PHP (Laravel), .NET, SQL, and MongoDB.
                   </p>
                   <button onClick={() => document.getElementById('connect').scrollIntoView({ behavior: 'smooth' })}>
                     Let’s Connect <ArrowRightCircle size={25} />
