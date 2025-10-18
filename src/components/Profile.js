@@ -12,7 +12,6 @@ import {
   Calendar,
   MapPin
 } from 'lucide-react';
-import colorSharp from "../assets/img/color-sharp.png";
 
 const Profile = () => {
   const [currentSkill, setCurrentSkill] = useState(0);

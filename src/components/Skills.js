@@ -5,7 +5,6 @@ import { RiTailwindCssFill } from "react-icons/ri";
 import { FaFlutter } from "react-icons/fa6";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import colorSharp from "../assets/img/color-sharp.png";
 import { TbBrandNextjs } from "react-icons/tb";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa"; // Add navigation icons
 

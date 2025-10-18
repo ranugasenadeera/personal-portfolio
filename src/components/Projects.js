@@ -5,7 +5,6 @@ import student from "../assets/img/student.png";
 import portfolio from "../assets/img/portfolio.png";
 import car from "../assets/img/car.png";
 import task from "../assets/img/task.png";
-import organic from "../assets/img/organic.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
