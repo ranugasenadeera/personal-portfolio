@@ -1,16 +1,10 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { Col, Row, Alert } from "react-bootstrap";
 
 export const Newsletter = ({ status, message, onValidated }) => {
-  const [email, setEmail] = useState('');
-
   useEffect(() => {
-    if (status === 'success') clearFields();
+    // No clearFields needed since email state is removed
   }, [status])
-
-  const clearFields = () => {
-    setEmail('');
-  }
 
   return (
       <Col lg={12}>

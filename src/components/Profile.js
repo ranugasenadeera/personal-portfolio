@@ -1,12 +1,5 @@
-import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import {
-  Code,
-  Database,
-  Smartphone,
-  Server,
-  Globe,
-  Layers,
   GraduationCap,
   Briefcase,
   Calendar,
@@ -14,23 +7,6 @@ import {
 } from 'lucide-react';
 
 const Profile = () => {
-  const [currentSkill, setCurrentSkill] = useState(0);
-
-  const skills = [
-    { icon: <Code size={40} />, name: "React", color: "#61DAFB" },
-    { icon: <Code size={40} />, name: "JavaScript", color: "#F7DF1E" },
-    { icon: <Code size={40} />, name: "TypeScript", color: "#3178C6" },
-    { icon: <Code size={40} />, name: "Next.js", color: "#000000" },
-    { icon: <Server size={40} />, name: "Java", color: "#ED8B00" },
-    { icon: <Server size={40} />, name: "Spring Boot", color: "#6DB33F" },
-    { icon: <Server size={40} />, name: "Laravel", color: "#FF2D20" },
-    { icon: <Database size={40} />, name: "MongoDB", color: "#47A248" },
-    { icon: <Database size={40} />, name: "MySQL", color: "#4479A1" },
-    { icon: <Smartphone size={40} />, name: "Flutter", color: "#02569B" },
-    { icon: <Layers size={40} />, name: "Tailwind CSS", color: "#06B6D4" },
-    { icon: <Globe size={40} />, name: "Bootstrap", color: "#7952B3" }
-  ];
-
   const education = [
     {
       degree: "BSc (Hons) in Information Technology",
@@ -71,14 +47,6 @@ const Profile = () => {
       status: "Completed"
     }
   ];
-
-  // Auto-rotate skills
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSkill((prev) => (prev + 1) % skills.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, [skills.length]);
 
   return (
     <section className="profile" id="profile" style={{
