@@ -8,15 +8,6 @@ export const Newsletter = ({ status, message, onValidated }) => {
     if (status === 'success') clearFields();
   }, [status])
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    email &&
-    email.indexOf("@") > -1 &&
-    onValidated({
-      EMAIL: email
-    })
-  }
-
   const clearFields = () => {
     setEmail('');
   }
@@ -31,7 +22,6 @@ export const Newsletter = ({ status, message, onValidated }) => {
               {status === 'error' && <Alert variant="danger">{message}</Alert>}
               {status === 'success' && <Alert variant="success">{message}</Alert>}
             </Col>
-            
           </Row>
         </div>
       </Col>
