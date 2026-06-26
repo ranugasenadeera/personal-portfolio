@@ -33,18 +33,34 @@ const Profile = () => {
 
   const experience = [
     {
-      position: "Software Engineering Intern",
       company: "Olee AI - Malabe (Onsite)",
-      period: "Aug 2025 - present",
-      description: "Develop and maintain frontend applications using Next.js with TypeScript. Collaborate with cross-functional teams to deliver scalable solutions and improve user experience.",
-      status: "Current"
+      status: "Current",
+      roles: [
+        {
+          position: "Associate Software Engineer",
+          period: "Feb 2026 - Present",
+          description: "Lead feature development and maintain frontend applications using Next.js with TypeScript. Collaborate with cross-functional teams to deliver scalable solutions and drive improvements in user experience.",
+          current: true
+        },
+        {
+          position: "Software Engineering Intern",
+          period: "Aug 2025 - Feb 2026",
+          description: "Developed and maintained frontend applications using Next.js with TypeScript. Collaborated with cross-functional teams to deliver scalable solutions and improve user experience.",
+          current: false
+        }
+      ]
     },
     {
-      position: "Software Developer Intern",
       company: "Apps Technologies - Remote",
-      period: "Oct 2024 - Apr 2025",
-      description: "Built and deployed multiple web and mobile applications using PHP (Laravel), focusing on performance, security, and responsive design using modern frameworks and cloud services.",
-      status: "Completed"
+      status: "Completed",
+      roles: [
+        {
+          position: "Software Developer Intern",
+          period: "Oct 2024 - Apr 2025",
+          description: "Built and deployed multiple web and mobile applications using PHP (Laravel), focusing on performance, security, and responsive design using modern frameworks and cloud services.",
+          current: false
+        }
+      ]
     }
   ];
 
@@ -217,44 +233,84 @@ const Profile = () => {
                       Current
                     </div>
                   )}
-                  <h5 style={{
-                    color: '#fff',
-                    fontSize: '18px',
-                    fontWeight: '600',
-                    marginBottom: '8px'
-                  }}>
-                    {exp.position}
-                  </h5>
                   <div style={{
                     display: 'flex',
                     alignItems: 'center',
                     gap: '5px',
-                    marginBottom: '5px'
+                    marginBottom: exp.roles.length > 1 ? '20px' : '5px'
                   }}>
                     <MapPin size={16} style={{ color: '#B8B8B8' }} />
-                    <span style={{ color: '#B8B8B8', fontSize: '14px' }}>
+                    <span style={{ color: '#B8B8B8', fontSize: '14px', fontWeight: '500' }}>
                       {exp.company}
                     </span>
                   </div>
-                  <div style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '5px',
-                    marginBottom: '15px'
-                  }}>
-                    <Calendar size={16} style={{ color: '#B8B8B8' }} />
-                    <span style={{ color: '#B8B8B8', fontSize: '14px' }}>
-                      {exp.period}
-                    </span>
-                  </div>
-                  <p style={{
-                    color: '#B8B8B8',
-                    fontSize: '14px',
-                    lineHeight: '1.6',
-                    margin: '0'
-                  }}>
-                    {exp.description}
-                  </p>
+
+                  {exp.roles.map((role, roleIndex) => (
+                    <div key={roleIndex} style={{ position: 'relative' }}>
+                      {exp.roles.length > 1 && (
+                        <div style={{
+                          position: 'absolute',
+                          left: '7px',
+                          top: roleIndex === 0 ? '18px' : '0',
+                          bottom: roleIndex === exp.roles.length - 1 ? 'auto' : '0',
+                          height: roleIndex === exp.roles.length - 1 ? '18px' : '100%',
+                          width: '2px',
+                          background: 'rgba(255,255,255,0.15)'
+                        }} />
+                      )}
+                      <div style={{
+                        display: 'flex',
+                        gap: '16px',
+                        marginBottom: roleIndex < exp.roles.length - 1 ? '20px' : '0'
+                      }}>
+                        {exp.roles.length > 1 && (
+                          <div style={{ flexShrink: 0, paddingTop: '2px' }}>
+                            <div style={{
+                              width: '16px',
+                              height: '16px',
+                              borderRadius: '50%',
+                              background: role.current ? '#4CAF50' : 'rgba(255,255,255,0.2)',
+                              border: role.current ? '2px solid #4CAF50' : '2px solid rgba(255,255,255,0.3)',
+                              boxShadow: role.current ? '0 0 8px rgba(76,175,80,0.5)' : 'none',
+                              position: 'relative',
+                              zIndex: 1
+                            }} />
+                          </div>
+                        )}
+                        <div style={{ flex: 1 }}>
+                          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '4px', flexWrap: 'wrap' }}>
+                            <h5 style={{
+                              color: '#fff',
+                              fontSize: '16px',
+                              fontWeight: '600',
+                              margin: 0
+                            }}>
+                              {role.position}
+                            </h5>
+                          </div>
+                          <div style={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '5px',
+                            marginBottom: '8px'
+                          }}>
+                            <Calendar size={13} style={{ color: '#B8B8B8' }} />
+                            <span style={{ color: '#B8B8B8', fontSize: '13px' }}>
+                              {role.period}
+                            </span>
+                          </div>
+                          <p style={{
+                            color: '#B8B8B8',
+                            fontSize: '13px',
+                            lineHeight: '1.6',
+                            margin: '0'
+                          }}>
+                            {role.description}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
                 </div>
               ))}
             </div>
