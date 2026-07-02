@@ -39,13 +39,13 @@ const Profile = () => {
         {
           position: "Associate Software Engineer",
           period: "Feb 2026 - Present",
-          description: "Lead feature development and maintain frontend applications using Next.js with TypeScript. Collaborate with cross-functional teams to deliver scalable solutions and drive improvements in user experience.",
+          description: "Lead architecture planning, database design, and backend development using Node.js and Express, alongside frontend applications built with Next.js and TypeScript. Collaborate with cross-functional teams to deliver scalable solutions and drive improvements in user experience.",
           current: true
         },
         {
           position: "Software Engineering Intern",
           period: "Aug 2025 - Feb 2026",
-          description: "Developed and maintained frontend applications using Next.js with TypeScript. Collaborated with cross-functional teams to deliver scalable solutions and improve user experience.",
+          description: "Contributed to architecture planning and database design, developed backend APIs and services using Node.js and Express, and built frontend applications using Next.js with TypeScript. Collaborated with cross-functional teams to deliver scalable solutions and improve user experience.",
           current: false
         }
       ]
@@ -57,7 +57,7 @@ const Profile = () => {
         {
           position: "Software Developer Intern",
           period: "Oct 2024 - Apr 2025",
-          description: "Built and deployed multiple web and mobile applications using PHP (Laravel), focusing on performance, security, and responsive design using modern frameworks and cloud services.",
+          description: "Built and maintained web applications using PHP (Laravel), focusing on performance, security, and responsive design using modern frameworks and technologies.",
           current: false
         }
       ]
