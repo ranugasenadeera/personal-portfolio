@@ -1,4 +1,5 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
+import { FaGithub } from "react-icons/fa";
 import { ProjectCard } from "./ProjectCard";
 import ERM from "../assets/img/ERM.png";
 import student from "../assets/img/student.png";
@@ -15,44 +16,54 @@ import country from "../assets/img/country.png";
 import hospital from "../assets/img/hospital.png";
 import sales from "../assets/img/sales.png";
 import mail from "../assets/img/mail.png";
+import evCharging from "../assets/img/ev-charging-2.png";
 
 export const Projects = () => {
 
   const projects1 = [
     {
+      title: "EV Charging Station System",
+      description: "Technologies: React 18, TypeScript, Vite, Tailwind CSS, ASP.NET Core (C#), MongoDB, JWT",
+      imgUrl: evCharging,
+      frontendLink: 'https://github.com/ranugasenadeera/ev-charging-web',
+      backendLink: 'https://github.com/ranugasenadeera/EV-Charging-Station-System',
+      briefIntro: "A centralized EV charging management platform for backoffice admins, station operators, and EV owners, featuring station management, role-based dashboards, real-time slot availability, and booking history tracking.",
+    },
+    {
       title: "Finance Tracker System",
       description: "Technologies: Spring Boot(Java), MongoDB, Next.js, Tailwind CSS, JWT, REST API, Postman",
       imgUrl: finance,
-      
-      link: 'https://github.com/ranugasenadeera/Finance-Tracker-System',
+      frontendLink: 'https://github.com/ranugasenadeera/financeTracker-frontend',
+      backendLink: 'https://github.com/ranugasenadeera/finance-tracker',
       briefIntro: "A personal finance tracker app to monitor expenses, set budgets, analyze trends, and generate reports. Responsive frontend with secure backend integration.",
     },
     {
       title: "Food Order & Delivery App",
       description: "Technologies: Spring Boot(Java), React, Docker, JWT, MySQL, REST API, Tailwind CSS",
       imgUrl: mealer,
-      link: 'https://github.com/ranugasenadeera/Food-Order-Delivery-App',
+      frontendLink: 'https://github.com/ranugasenadeera/food-delivery-frontend',
+      backendLink: 'https://github.com/ranugasenadeera/food_delivery_system',
       briefIntro: "A food delivery platform for customers, restaurants and delivery personnel, featuring order management, delivery tracking, and menu administration with separate admin panel.",
     },
     {
       title: "CountrySnap",
       description: "Technologies: React, Tailwind CSS, React Query, React Router, REST Countries API, Vercel",
       imgUrl: country,
-      link: 'https://github.com/ranugasenadeera/CountrySnap',
+      link: 'https://github.com/ranugasenadeera/country-snap',
       briefIntro: "Built a responsive web app to search, view, and bookmark country data with user authentication and seamless UX. Integrated REST Countries API and managed data fetching and caching efficiently using React Query.",
     },
     {
       title: "Hospital Management System",
       description: "Technologies: PHP (Laravel), JavaScript, Bootstrap, MySQL",
       imgUrl: hospital,
-      link: 'https://github.com/ranugasenadeera/Hospital-Management-System',
+      link: 'https://github.com/ranugasenadeera/Hospital_management_api',
       briefIntro: "Built a comprehensive hospital management platform with patient appointment booking, medical history tracking, report access, and online payments, reducing manual workload by 25%. Integrated patient management and CRM improving hospital efficiency by 20%.",
     },
     {
       title: "Sales Optimiser",
       description: "Technologies: PHP (Laravel), JavaScript, Bootstrap, MySQL",
       imgUrl: sales,
-      link: 'https://github.com/ranugasenadeera/Sales-Optimiser',
+      link: 'https://github.com/ranugasenadeera/SalesOptimizer',
       briefIntro: "Developed a Sales Optimiser using Laravel with a comprehensive bill management system including discounts and loyalty points, improving billing accuracy by 15%. Integrated a dynamic sales dashboard for real-time performance insights, boosting sales productivity by 10%.",
     },
     {
@@ -75,7 +86,7 @@ export const Projects = () => {
       imgUrl: portfolio,
       link: 'https://github.com/ranugasenadeera/personal-portfolio',
       briefIntro: "This portfolio showcases my projects and skills in web and mobile development, highlighting my expertise in design and functionality. It features project descriptions, technical details, and contact information for potential collaborations.",
-    },
+    }
   ];
 
   const projects2 = [
@@ -83,21 +94,22 @@ export const Projects = () => {
       title: "Mental Health App",
       description: "Technologies: Flutter, PHP, Bootstrap, and MySQL",
       imgUrl: mindwell,
-      link: 'https://github.com/ranugasenadeera/Mental-Health-App',
+      appLink: 'https://github.com/ranugasenadeera/mindwell_app',
+      backendLink: 'https://github.com/ranugasenadeera/mindwel_apis',
       briefIntro: "A mobile app for tracking mental health, featuring mood and sleep tracking, meditation sessions, and blog suggestions to support user well-being.",
     },
     {
       title: "Task Tracker App",
       description: "Technologies: Kotlin and Room Database",
       imgUrl: task,
-      link: 'https://github.com/ranugasenadeera/Mobile-CRUD-App',
+      link: 'https://github.com/ranugasenadeera/Mobile-CRUD-app',
       briefIntro: "A robust task management application that enables users to efficiently organize, add, edit, view, and delete tasks, enhancing productivity with a user-friendly interface.",
     },
     {
       title: "Rapid Lane",
       description: "Technologies: Kotlin",
       imgUrl: car,
-      link: 'https://github.com/ranugasenadeera/Car-Game',
+      link: 'https://github.com/ranugasenadeera/Car-game',
       briefIntro: "A car game where players navigate a red car across lanes, avoiding collisions with oncoming yellow cars. Players use touch controls to steer and experience varying speeds and lane challenges.",
     },
   ];
@@ -107,7 +119,6 @@ export const Projects = () => {
       title: "Public Email API Service",
       description: "Technologies: Next.js, Spring Boot(Java), MongoDB, Tailwind CSS, TypeScript, REST API",
       imgUrl: mail,
-      link: 'https://github.com/ranugasenadeera/Public-Email-API-Service',
       briefIntro: "An Email service (still under development) to allow users to send bulk emails, track job statuses, and manage API keys with ease",
     }
   ];
@@ -179,6 +190,17 @@ export const Projects = () => {
                       </Tab.Pane>
                     </Tab.Content>
                   </Tab.Container>
+                  <div className="text-center">
+                    <a
+                      href="https://github.com/ranugasenadeera?tab=repositories"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="projects-github-btn"
+                    >
+                      <FaGithub />
+                      <span>View All Projects</span>
+                    </a>
+                  </div>
                 </div>}
             </TrackVisibility>
           </Col>
