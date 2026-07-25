@@ -1,7 +1,6 @@
 import React, { useRef } from "react";
-import { FaReact, FaJsSquare, FaBootstrap, FaJava, FaLaravel } from "react-icons/fa";
+import { FaReact, FaJsSquare, FaJava, FaLaravel } from "react-icons/fa";
 import { SiMongodb, SiTypescript, SiSpringboot, SiMysql, SiPostgresql, SiNodedotjs, SiExpress, SiDotnet } from "react-icons/si";
-import { RiTailwindCssFill } from "react-icons/ri";
 import { FaFlutter } from "react-icons/fa6";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';

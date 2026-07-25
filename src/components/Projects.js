@@ -16,7 +16,7 @@ import country from "../assets/img/country.png";
 import hospital from "../assets/img/hospital.png";
 import sales from "../assets/img/sales.png";
 import mail from "../assets/img/mail.png";
-import evCharging from "../assets/img/ev-charging-2.png";
+import evCharging from "../assets/img/ev-charging.png";
 
 export const Projects = () => {
 
