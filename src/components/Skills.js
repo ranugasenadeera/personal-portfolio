@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { FaReact, FaJsSquare, FaBootstrap, FaJava, FaLaravel } from "react-icons/fa";
-import { SiMongodb, SiTypescript, SiSpringboot, SiMysql } from "react-icons/si";
+import { SiMongodb, SiTypescript, SiSpringboot, SiMysql, SiPostgresql, SiNodedotjs, SiExpress, SiDotnet } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { FaFlutter } from "react-icons/fa6";
 import Carousel from 'react-multi-carousel';
@@ -88,14 +88,6 @@ export const Skills = () => {
                   <h5>JavaScript</h5>
                 </div>
                 <div className="item">
-                  <RiTailwindCssFill size={80} color="#38B2AC" style={iconStyle} />
-                  <h5>Tailwind CSS</h5>
-                </div>
-                <div className="item">
-                  <FaBootstrap size={80} color="#7952B3" style={iconStyle} />
-                  <h5>Bootstrap</h5>
-                </div>
-                <div className="item">
                   <SiMysql size={80} color="#00758F" style={iconStyle} />
                   <h5>SQL</h5>
                 </div>
@@ -114,6 +106,22 @@ export const Skills = () => {
                 <div className="item">
                   <FaFlutter size={80} color="#02569B" style={iconStyle} />
                   <h5>Flutter</h5>
+                </div>
+                <div className="item">
+                  <SiPostgresql size={80} color="#4169E1" style={iconStyle} />
+                  <h5>PostgreSQL</h5>
+                </div>
+                <div className="item">
+                  <SiNodedotjs size={80} color="#339933" style={iconStyle} />
+                  <h5>Node.js</h5>
+                </div>
+                <div className="item">
+                  <SiExpress size={80} color="#ffffff" style={iconStyle} />
+                  <h5>Express</h5>
+                </div>
+                <div className="item">
+                  <SiDotnet size={80} color="#512BD4" style={iconStyle} />
+                  <h5>.NET / C#</h5>
                 </div>
               </Carousel>
             </div>

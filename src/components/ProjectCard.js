@@ -1,8 +1,10 @@
 import { Col } from "react-bootstrap";
+import { FaGithub, FaLaptopCode, FaMobileAlt, FaServer } from "react-icons/fa";
 
-export const ProjectCard = ({ title, description, imgUrl, link, briefIntro }) => {
-  const handleClick = () => {
-    window.open(link, "_blank");
+export const ProjectCard = ({ title, description, imgUrl, link, frontendLink, appLink, backendLink, briefIntro }) => {
+  const openLink = (url) => (e) => {
+    e.stopPropagation();
+    window.open(url, "_blank");
   };
 
   const highlightTechnologies = (text) => {
@@ -60,14 +62,67 @@ export const ProjectCard = ({ title, description, imgUrl, link, briefIntro }) =>
 
   return (
     <Col size={12} sm={6} md={4}>
-      <div className="proj-imgbx" onClick={handleClick} style={{ cursor: "pointer" }}>
+      <div className="proj-imgbx">
         <img src={imgUrl} alt={title} />
         <div className="proj-intro">
           <span dangerouslySetInnerHTML={{ __html: highlightedDesc }}></span>
         </div>
         <div className="proj-txtx">
-          <h4>{title}</h4>
-          <p style={{ color: 'white', fontSize: '12px' }}>{briefIntro}</p>
+          <div className="proj-txtx-inner">
+            <h4>{title}</h4>
+            <p style={{ color: 'white', fontSize: '12px' }}>{briefIntro}</p>
+            {(frontendLink || appLink || backendLink || link) && (
+            <div className="proj-links">
+              {frontendLink && (
+                <button
+                  type="button"
+                  className="proj-link-btn"
+                  title="View frontend source on GitHub"
+                  onClick={openLink(frontendLink)}
+                >
+                  <FaLaptopCode className="proj-link-icon" />
+                  <span>Frontend Code</span>
+                  <FaGithub className="proj-link-icon proj-link-icon-gh" />
+                </button>
+              )}
+              {appLink && (
+                <button
+                  type="button"
+                  className="proj-link-btn"
+                  title="View app source on GitHub"
+                  onClick={openLink(appLink)}
+                >
+                  <FaMobileAlt className="proj-link-icon" />
+                  <span>App Code</span>
+                  <FaGithub className="proj-link-icon proj-link-icon-gh" />
+                </button>
+              )}
+              {backendLink && (
+                <button
+                  type="button"
+                  className="proj-link-btn"
+                  title="View backend source on GitHub"
+                  onClick={openLink(backendLink)}
+                >
+                  <FaServer className="proj-link-icon" />
+                  <span>Backend Code</span>
+                  <FaGithub className="proj-link-icon proj-link-icon-gh" />
+                </button>
+              )}
+              {!frontendLink && !appLink && !backendLink && link && (
+                <button
+                  type="button"
+                  className="proj-link-btn"
+                  title="View source on GitHub"
+                  onClick={openLink(link)}
+                >
+                  <FaGithub className="proj-link-icon" />
+                  <span>View Code</span>
+                </button>
+              )}
+            </div>
+            )}
+          </div>
         </div>
       </div>
     </Col>
