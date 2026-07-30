@@ -57,7 +57,7 @@ const Profile = () => {
         {
           position: "Software Developer Intern",
           period: "Oct 2024 - Apr 2025",
-          description: "Built and maintained web applications using PHP (Laravel), focusing on performance, security, and responsive design using modern frameworks and technologies.",
+          description: "Assisted in building and maintaining modules of an ERP system, fixing bugs and improving CRUD functionality across product, category, and logistics sections, resulting in a 20% performance boost. Collaborated with a team to develop a cross-platform mobile app for hospital recommendations, achieving 85% precision/recall.",
           current: false
         }
       ]
