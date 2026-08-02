@@ -39,13 +39,15 @@ const Profile = () => {
         {
           position: "Associate Software Engineer",
           period: "Feb 2026 - Present",
-          description: "Lead architecture planning, database design, and backend development using Node.js and Express, alongside frontend applications built with Next.js and TypeScript. Collaborate with cross-functional teams to deliver scalable solutions and drive improvements in user experience.",
+          description: "Built a bulk WhatsApp messaging system with retry logic and Meta template integration. Designed the backend for an AI-graded quiz pipeline, cutting grading turnaround from minutes to near-instant.",
+          technologies: ["Node.js", "Express", "Next.js", "TypeScript", "PostgreSQL", "Redis" , "Prisma"],
           current: true
         },
         {
           position: "Software Engineering Intern",
           period: "Aug 2025 - Feb 2026",
-          description: "Contributed to architecture planning and database design, developed backend APIs and services using Node.js and Express, and built frontend applications using Next.js with TypeScript. Collaborated with cross-functional teams to deliver scalable solutions and improve user experience.",
+          description: "Built a token-based billing engine with affordability checks and ledger reconciliation. Architected a local-first chat history system with IndexedDB, cutting load times by ~60%.",
+          technologies: ["Node.js", "Express", "Next.js", "IndexedDB", "PostgreSQL", "Ably"],
           current: false
         }
       ]
@@ -57,7 +59,8 @@ const Profile = () => {
         {
           position: "Software Developer Intern",
           period: "Oct 2024 - Apr 2025",
-          description: "Built and maintained web applications using PHP (Laravel), focusing on performance, security, and responsive design using modern frameworks and technologies.",
+          description: "Improved CRUD functionality across an ERP system, boosting performance by 20%. Built a cross-platform mobile app for hospital recommendations, achieving 85% precision/recall.",
+          technologies: ["PHP", "Laravel", "MySQL"],
           current: false
         }
       ]
@@ -303,10 +306,31 @@ const Profile = () => {
                             color: '#B8B8B8',
                             fontSize: '13px',
                             lineHeight: '1.6',
-                            margin: '0'
+                            margin: '0 0 10px 0'
                           }}>
                             {role.description}
                           </p>
+                          {role.technologies && (
+                            <div style={{
+                              display: 'flex',
+                              flexWrap: 'wrap',
+                              gap: '6px'
+                            }}>
+                              {role.technologies.map((tech, techIndex) => (
+                                <span key={techIndex} style={{
+                                  fontSize: '11px',
+                                  fontWeight: '500',
+                                  color: '#E0E0E0',
+                                  background: 'rgba(255, 255, 255, 0.08)',
+                                  border: '1px solid rgba(255, 255, 255, 0.15)',
+                                  padding: '3px 10px',
+                                  borderRadius: '20px'
+                                }}>
+                                  {tech}
+                                </span>
+                              ))}
+                            </div>
+                          )}
                         </div>
                       </div>
                     </div>
