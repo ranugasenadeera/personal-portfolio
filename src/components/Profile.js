@@ -12,7 +12,7 @@ const Profile = () => {
       degree: "BSc (Hons) in Information Technology",
       specialization: "Specialization in Software Engineering",
       institution: "SLIIT (Sri Lanka Institute of Information Technology)",
-      period: "Oct 2022 - Oct 2026",
+      period: "Oct 2022 - Present",
       status: "Current"
     },
     {
