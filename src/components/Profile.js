@@ -10,10 +10,10 @@ const Profile = () => {
   const education = [
     {
       degree: "BSc (Hons) in Information Technology",
-      specialization: "Specialization in Software Engineering",
+      specialization: "Software Engineering",
       institution: "SLIIT (Sri Lanka Institute of Information Technology)",
-      period: "Oct 2022 - Oct 2026",
-      status: "Current"
+      period: "Oct 2022 - Sep 2026",
+      status: "Completed"
     },
     {
       degree: "Advanced Level (Physical Science)",
@@ -40,7 +40,7 @@ const Profile = () => {
           position: "Associate Software Engineer",
           period: "Feb 2026 - Present",
           description: "Built a bulk WhatsApp messaging system with retry logic and Meta template integration. Designed the backend for an AI-graded quiz pipeline, cutting grading turnaround from minutes to near-instant.",
-          technologies: ["Node.js", "Express", "Next.js", "TypeScript", "PostgreSQL", "Redis" , "Prisma"],
+          technologies: ["Node.js", "Express", "Next.js", "TypeScript", "PostgreSQL", "Redis", "Prisma"],
           current: true
         },
         {
